@@ -23,11 +23,12 @@ class UserController extends Controller
 
             return redirect()->route('users.index');    
         } else {
-            return redirect()->back()->withErrors('Flaha ao buscar dados da API');
+            return redirect()->back()->withErrors('Falha ao buscar dados da API');
         }
     }
 
     //Método para exibir os usuários armazenados no arquivo JSON
+
     public function index()
     {
         // Verifica se o arquivo JSON existe e lê o conteúdo
