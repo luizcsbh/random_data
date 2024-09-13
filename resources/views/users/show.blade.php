@@ -21,7 +21,7 @@
                     <p><strong>Username:</strong> {{ $user['username'] }}</p>
                     <p><strong>Email:</strong> {{ $user['email'] }}</p>
                     <p><strong>Gênero:</strong> {{ $user['gender'] }}</p>
-                    <p><strong>Data de Nascimento:</strong> {{ $user['date_of_birth'] }}</p>
+                    <p><strong>Data de Nascimento:</strong> {{ \Carbon\Carbon::parse($user['date_of_birth'])->format('d/m/Y') }}</p>
                     <p><strong>Telefone:</strong> {{ $user['phone_number'] }}</p>
                     <p><strong>Segurança Social:</strong> {{ $user['social_insurance_number'] }}</p>
                     <p><strong>Emprego:</strong> {{ $user['employment']['title'] }}</p>
