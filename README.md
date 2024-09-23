@@ -1,3 +1,15 @@
+![GitHub commits since tagged version (branch)](https://img.shields.io/github/commits-since/luizcsbh/random_data/main)
+[![issues](https://img.shields.io/github/issues/luizcsbh/random_data)](https://github.com/luizcsbh/random_data/issues)
+![forks](https://img.shields.io/github/forks/luizcsbh/random_data)
+![stars](https://img.shields.io/github/stars/luizcsbh/random_data)
+[![lincença](https://img.shields.io/github/license/luizcsbh/random_data)](https://github.com/luizcsbh/random_data/blob/master/LICENSE)
+![code-size](https://img.shields.io/github/languages/code-size/luizcsbh/random_data)
+[![commit activity](https://img.shields.io/github/commit-activity/m/luizcsbh/random_data)](https://github.com/luizcsbh/random_data/commits)
+[![last commit](https://img.shields.io/github/last-commit/luizcsbh/random_data)](https://github.com/luizcsbh/random_data/commits)
+[![CodeFactor](https://www.codefactor.io/repository/github/luizcsbh/random_data/badge)](https://www.codefactor.io/repository/github/luizcsbh/random_data)
+[![version](https://img.shields.io/github/package-json/v/luizcsbh/random_data)](https://github.com/luizcsbh/random_data/blob/main/package.json)
+
+
 # Projeto Laravel - Exibição de Usuários com Google Maps
 
 Este projeto é uma aplicação web construída em Laravel que consome dados de usuários de uma API externa e exibe informações detalhadas, incluindo localização no Google Maps, em uma interface de usuário.
