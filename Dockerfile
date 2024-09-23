@@ -1,40 +1,43 @@
-# Use uma imagem oficial do PHP com FPM
-FROM php:8.1-fpm
+# Use uma imagem oficial do PHP 8.2 com suporte a extensões necessárias para Laravel
+FROM php:8.2-fpm
 
-# Instale dependências do sistema
+# Instalar dependências do sistema
 RUN apt-get update && apt-get install -y \
-    build-essential \
+    git \
+    curl \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
-    locales \
-    zip \
-    jpegoptim optipng pngquant gifsicle \
-    vim \
+    libonig-dev \
+    libzip-dev \
     unzip \
-    git \
-    curl \
-    sqlite3 \
-    libsqlite3-dev
+    zip \
+    nano \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install gd mbstring zip pdo pdo_mysql
 
-# Instale extensões do PHP necessárias
-RUN docker-php-ext-install pdo pdo_sqlite gd
+# Instalar Composer globalmente
+COPY --from=composer:2.5 /usr/bin/composer /usr/bin/composer
 
-# Instale o Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
-# Configure o diretório de trabalho
+# Definir o diretório de trabalho
 WORKDIR /var/www
 
-# Copie todos os arquivos para o contêiner
+# Copiar o arquivo de dependências e instalar via Composer
+COPY composer.json composer.lock ./
+RUN composer install --no-scripts --no-autoloader
+
+# Copiar todos os arquivos do projeto
 COPY . .
 
-# Dê as permissões corretas para a pasta de armazenamento e cache do Laravel
+# Gerar autoloader do Composer
+RUN composer dump-autoload --optimize
+
+# Ajustar permissões
 RUN chown -R www-data:www-data /var/www \
-    && chmod -R 775 /var/www/storage
+    && chmod -R 755 /var/www/storage
 
-# Exponha a porta 9000 para o PHP-FPM
-EXPOSE 9000
+# Expor a porta usada pelo servidor artisan
+EXPOSE 8000
 
-# Inicia o PHP-FPM
-CMD ["php-fpm"]
+# Definir o comando de execução do contêiner para rodar o servidor Laravel
+CMD php artisan serve --host=0.0.0.0 --port=8000

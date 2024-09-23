@@ -1,37 +1,16 @@
 version: '3.8'
-
 services:
   app:
     build:
       context: .
       dockerfile: Dockerfile
-    image: random_data_app
-    container_name: random_data_app
-    restart: unless-stopped
-    tty: true
-    environment:
-      SERVICE_NAME: app
-      SERVICE_TAGS: dev
-    working_dir: /var/www
+    container_name: random_data
     volumes:
-      - ./:/var/www
-    networks:
-      - laravel
-
-  webserver:
-    image: nginx:alpine
-    container_name: random_data_webserver
-    restart: unless-stopped
-    tty: true
+      - .:/var/www
     ports:
-      - "8000:80"
-    volumes:
-      - ./:/var/www
-      - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - "8000:8000"
     networks:
-      - laravel
-    depends_on:
-      - app
+      - app-network
 
 networks:
-  laravel:
+  app-network:
