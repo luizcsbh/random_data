@@ -7,7 +7,7 @@
 [![commit activity](https://img.shields.io/github/commit-activity/m/luizcsbh/random_data)](https://github.com/luizcsbh/random_data/commits)
 [![last commit](https://img.shields.io/github/last-commit/luizcsbh/random_data)](https://github.com/luizcsbh/random_data/commits)
 [![CodeFactor](https://www.codefactor.io/repository/github/luizcsbh/random_data/badge)](https://www.codefactor.io/repository/github/luizcsbh/random_data)
-[![version](https://img.shields.io/github/package-json/v/luizcsbh/random_data)](https://github.com/luizcsbh/random_data/blob/main/package.json)
+[![version](https://img.shields.io/github/package-json/v/luizcsbh/random_data)](https://github.com/luizcsbh/random_data/blob/master/package.json)
 
 
 # Projeto Laravel - Exibição de Usuários com Google Maps
