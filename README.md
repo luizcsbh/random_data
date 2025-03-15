@@ -6,6 +6,7 @@
 ![code-size](https://img.shields.io/github/languages/code-size/luizcsbh/random_data)
 [![commit activity](https://img.shields.io/github/commit-activity/m/luizcsbh/random_data)](https://github.com/luizcsbh/random_data/commits)
 [![last commit](https://img.shields.io/github/last-commit/luizcsbh/random_data)](https://github.com/luizcsbh/random_data/commits)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/luizcsbh/random_data/laravel.yml)](https://github.com/luizcsbh/random_data/actions)
 [![CodeFactor](https://www.codefactor.io/repository/github/luizcsbh/random_data/badge)](https://www.codefactor.io/repository/github/luizcsbh/random_data)
 [![version](https://img.shields.io/github/package-json/v/luizcsbh/random_data)](https://github.com/luizcsbh/random_data/blob/master/package.json)
 
