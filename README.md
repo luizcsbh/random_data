@@ -59,7 +59,10 @@ Uso
    ```bash
    php artisan serve
    ```
-	•	Acesse a aplicação em http://localhost:8000.
+	•	Acesse a aplicação local em http://localhost:8000.
+
+   •	Acesse a url da aplicação em https://randomdata.up.railway.app/
+   
 
 Funcionalidades da Interface
 

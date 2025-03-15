@@ -10,3 +10,6 @@ npm run build
 
 # Clear cache
 php artisan optimize:clear
+composer install --no-dev --optimize-autoloader 
+php artisan migrate --force
+php artisan db:seed
