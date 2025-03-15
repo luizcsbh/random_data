@@ -45,7 +45,8 @@
             "@php artisan key:generate --ansi"
         ],
         "post-install-cmd": [
-            "php artisan optimize",
+            "php artisan optimize:clear",
+            "php artisan migrate --seed",
             "chmod -R 755 storage bootstrap/cache"
         ]
     },
