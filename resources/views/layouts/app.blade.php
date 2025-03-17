@@ -27,14 +27,14 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark position-fixed w-100 top-0 start-0 z-3">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('users.index') }}">Random Data App</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav d-flex flex-column flex-lg-row align-items-center w-100 text-center">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('users.index') }}">Usuários</a>
                     </li>
@@ -43,11 +43,12 @@
                     </li>
                 </ul>
             </div>
+            
         </div>
     </nav>
 
-    <!-- Conteúdo Principal -->
-    <main class="py-4">
+    <!-- Ajuste para Navbar Fixa -->
+    <main class="py-5 mt-5">
         @yield('content')
     </main>
 
@@ -55,6 +56,7 @@
     <x-footer />
 
     <!-- Bootstrap 5 JS Bundle (inclui Popper) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
